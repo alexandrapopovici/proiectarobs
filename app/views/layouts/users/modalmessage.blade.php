@@ -1,4 +1,4 @@
-<?php if (isset($user)) { ?>
+<?php //if (isset($user)) { ?>
     <div>
         {{ Form::open(array('url' => 'message/confirm', 'method' => 'post')) }} 
         {{Form::hidden('receiver_name','',array('class'  => 'receiver'))}}
@@ -16,4 +16,4 @@
         {{ Form::button( 'Cancel', array('class'=>'btn btn-primary','id'=>'cancelsendmessage')) }} 
         {{ Form::close() }}
     </div> 
-<?php } ?>
+<?php //} ?>

@@ -44,6 +44,7 @@ class MessageController extends BaseController {
                             ->where('users.id', '=', Auth::user()->id)
                             ->where('inbox_status', '=', '1');
                         })
+                        ->orderBy('messages.read', 'asc')
                 ->get();
         return View::make('inboxmessages', array('messages' => $messagesIds));
     }
@@ -56,8 +57,9 @@ class MessageController extends BaseController {
                             $join->on('users.id', '=', 'messages.sender_id')
                             ->where('users.id', '=', Auth::user()->id)
                             ->where('sent_status', '=', '1');
-                            ;
+                            
                         })
+                ->orderBy('messages.date', 'desc')
                 ->get();
         return View::make('sentmessages', array('messages' => $messagesIds));
     }

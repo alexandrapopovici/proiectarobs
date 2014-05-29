@@ -9,7 +9,7 @@
         <link href="{{URL::to('css/custom/site.css')}}" rel="stylesheet">
         <link href="{{URL::to('css/bootstrap.css')}}" rel="stylesheet">      
         <link href="{{URL::to('js/plugins/FlexSlider/flexslider.css')}}" rel="stylesheet">
-
+        
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -27,13 +27,13 @@
             </tr>
             <tr>
                 <td style="border-right:1px solid gainsboro" width="300px">                  
-                    @include('layouts/users/userMenu')                    
+                       @include('layouts/users/userMenu')                    
                 </td>
                 <td>
-
-                    <div class="content">
-                        @yield('content')
-
+                    
+                        <div class="content">
+                            @yield('content')
+                        
                     </div>
                 </td>
             </tr>
@@ -48,8 +48,8 @@
         </script>
         <script src="{{ URL::to('js/jquery.js') }}"></script>
         <script src="{{ URL::to('js/bootstrap.js') }}"></script>       
-        <script src="{{ URL::to('js/plugins/jqueryvalidation/jquery.validate.min.js') }}"></script>
+          <script src="{{ URL::to('js/plugins/jqueryvalidation/jquery.validate.min.js') }}"></script>
         <script src="{{ URL::to('js/plugins/FlexSlider/jquery.flexslider.js') }}"></script>
-        <script src="{{ URL::to('js/custom/site.js') }}"></script>
+         <script src="{{ URL::to('js/custom/site.js') }}"></script>
     </body>
 </html>

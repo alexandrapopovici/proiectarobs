@@ -17,21 +17,24 @@
         <p align="right"><a href="#" class="sendmessages" id="{{ 'sendmessage_'.$sender_user }}" data-toggle="modal" data-target="#myModal">REPLY</a></p>   
 <?php } ?>
     @endforeach
+
     <br>
     <br>
     <a href="{{ URL::previous() }}">Go Back</a>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Create Message</h4>
-                </div>
-                <div class="modal-body">
-                    @include('layouts/users/modalmessage')
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Create Message</h4>
+                    </div>
+                    <div class="modal-body">
+                        
+                        @include('layouts/users/modalmessage')
+                        ......
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </div>
 @stop

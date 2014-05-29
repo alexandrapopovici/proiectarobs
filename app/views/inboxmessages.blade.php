@@ -9,7 +9,7 @@
     <p id="message"></p>
     <div>   
         <table class="table table-hover">
-            <tr><td><b>Status</b></td><td><b>From</b></td><td><b>Subject</b></td><td></td><td></td></tr>
+            <tr><td><b>Status</b></td><td><b>Date</b></td><td><b>From</b></td><td><b>Subject</b></td><td></td><td></td></tr>
             @foreach ($messages as $message)
             <tr id="{{ 'message_'.$message->id_mess }}">
                 <td>
@@ -17,6 +17,9 @@
                         <p id="unread"> Unread </p>
                     <?php } else { ?>
                         Read <?php } ?>
+                </td>
+                <td>
+                  {{$message->date}}  
                 </td>
                 <td>
                     <?php $user = DB::table('users')->where('id', $message->sender_id)->pluck('username'); ?>
